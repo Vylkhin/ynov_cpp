@@ -53,7 +53,7 @@ public:
 	void setCharacters(vector<Character*> characters);
 	vector<Character*> getAllies();
 
-	~Character();
+	virtual ~Character();
 
 };
 

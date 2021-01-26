@@ -1,0 +1,3 @@
+﻿  MageHeal.cpp
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\MageHeal.cpp(54,31): warning C4244: '-=' : conversion de 'double' en 'int', perte possible de données
+  ConsoleApplication1.vcxproj -> D:\cours\c++\ConsoleApplication1\Debug\ConsoleApplication1.exe

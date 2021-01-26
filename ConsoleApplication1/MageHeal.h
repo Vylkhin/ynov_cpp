@@ -2,8 +2,6 @@
 
 using namespace std;
 
-#include <string>
-#include <iostream>
 #include "Mage.h"
 
 class MageHeal : public Mage
@@ -13,13 +11,13 @@ protected:
 
 public:
 	MageHeal(string name);
-	~MageHeal();
+	virtual ~MageHeal();
 	int heal(Character* target);
 	int zettaheal();
 	int getSpirit();
 	void setSpirit(int spirit);
 	int takeDamage(int value);
 	int takeHealing(int value);
-	void isDead();
+	void dead();
 };
 

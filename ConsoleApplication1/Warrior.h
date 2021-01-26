@@ -2,11 +2,9 @@
 
 using namespace std;
 
-#include <string>
-#include <iostream>
 #include "Character.h"
 
-class Warrior : public Character
+class Warrior : virtual public Character
 {
 
 
@@ -14,13 +12,13 @@ class Warrior : public Character
 
 public:
 	Warrior(string name);
-	~Warrior();
+	virtual ~Warrior();
 	int hammerHit(Character* target);
 	int smash();
 	int seppuku();
 	int takeDamage(int value);
 	int takeHealing(int value);
-	void isDead();
+	void dead();
 
 };
 

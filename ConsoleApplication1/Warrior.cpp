@@ -6,6 +6,11 @@ Warrior::Warrior(string name) : Character(name){
 	m_defense = 3;
 	m_x = 3;
 	m_y = 4;
+	m_type = "warrior";
+}
+
+Warrior::~Warrior()
+{
 }
 
 int Warrior::hammerHit(Character* target) {
@@ -59,7 +64,7 @@ int Warrior::takeDamage(int value)
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Wow that hurts..." << endl;
 	showHP();
-	isDead();
+	dead();
 	return m_hp;
 }
 
@@ -72,7 +77,7 @@ int Warrior::takeHealing(int value)
 	return m_hp;
 }
 
-void Warrior::isDead()
+void Warrior::dead()
 {
 	if (m_hp <= 0) std::cout << m_name << ": I'm dying the warrior way, with honor !" << endl;
 }

@@ -22,6 +22,7 @@ protected:
 	int m_y;
 	vector<Character*> m_characters;
 	vector<Character*> m_allies;
+	string m_type;
 
 
 public:
@@ -31,7 +32,7 @@ public:
 	int areaAttack();
 	Weapon* changeWeapon(Weapon* newWeapon);
 	void showHP();
-	virtual void isDead();
+	virtual void dead();
 	virtual int takeDamage(int value);
 	Character* addAlly(Character* ally);
 	virtual int takeHealing(int value);
@@ -52,8 +53,10 @@ public:
 	vector<Character*> getCharacters();
 	void setCharacters(vector<Character*> characters);
 	vector<Character*> getAllies();
+	string getType();
+	void setType(string type);
 
-	virtual ~Character();
+	virtual ~Character() = 0;
 
 };
 

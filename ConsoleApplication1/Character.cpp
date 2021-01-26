@@ -9,6 +9,7 @@ Character::Character(string name){
 	m_weapon = new Weapon("sword", 30, 5);
 	m_x = 2;
 	m_y = 1;
+	m_type = "character";
 }
 
 int Character::drinkPotion(int amount) {
@@ -37,7 +38,7 @@ void Character::showHP() {
 	std::cout << m_name << " now has " << m_hp << " HP." << endl;
 }
 
-void Character::isDead() {
+void Character::dead() {
 	if (m_hp <= 0) std::cout << m_name << ": I am dead." << endl;
 }
 
@@ -46,7 +47,7 @@ int Character::takeDamage(int value) {
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Ouch." << endl;
 	showHP();
-	isDead();
+	dead();
 	return m_hp;
 }
 
@@ -138,6 +139,16 @@ void Character::setCharacters(vector<Character*> characters)
 vector<Character*> Character::getAllies()
 {
 	return m_allies;
+}
+
+string Character::getType()
+{
+	return m_type;
+}
+
+void Character::setType(string type)
+{
+	m_type = type;
 }
 
 Character::~Character()

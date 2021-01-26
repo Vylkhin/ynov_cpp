@@ -2,11 +2,9 @@
 
 using namespace std;
 
-#include <string>
-#include <iostream>
 #include "Character.h"
 
-class Mage : public Character
+class Mage : virtual public Character
 {
 protected:
 	int m_magic;
@@ -14,11 +12,11 @@ protected:
 
 public:
 	Mage(string name);
-	~Mage();
+	virtual ~Mage();
 	int fireball(Character* target);
 	int zettaflare();
 	int takeDamage(int value);
 	int takeHealing(int value);
-	void isDead();
+	void dead();
 };
 

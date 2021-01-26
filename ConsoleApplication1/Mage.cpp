@@ -8,6 +8,11 @@ Mage::Mage(string name) : Character(name) {
 	m_defense = 1;
 	m_x = 2;
 	m_y = 1;
+	m_type = "mage";
+}
+
+Mage::~Mage()
+{
 }
 
 int Mage::zettaflare()
@@ -41,7 +46,7 @@ int Mage::takeDamage(int value)
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Hey, stop hitting me !" << endl;
 	showHP();
-	isDead();
+	dead();
 	return m_hp;
 }
 
@@ -54,9 +59,9 @@ int Mage::takeHealing(int value)
 	return m_hp;
 }
 
-void Mage::isDead()
+void Mage::dead()
 {
-	if (m_hp <= 0) std::cout << m_name << ": So that's how a die... Meh." << endl;
+	if (m_hp <= 0) std::cout << m_name << ": So that's how I die... Meh." << endl;
 }
 
 int Mage::fireball(Character* target) {

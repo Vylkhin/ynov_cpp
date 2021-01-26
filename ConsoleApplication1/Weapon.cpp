@@ -6,6 +6,10 @@ Weapon::Weapon(string name, int damage, int range) {
 	m_range = range;
 }
 
+Weapon::~Weapon()
+{
+}
+
 int Weapon::attack(Character* character, Character* target) {
 	cout << character->getName() << " attacks " << target->getName() << " with a " << m_name << endl;
 	target->takeDamage((character->getStrength() * m_damage)/(target->getDefense()*2.5));

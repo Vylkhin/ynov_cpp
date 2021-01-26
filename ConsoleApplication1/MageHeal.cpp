@@ -1,9 +1,10 @@
 #include "MageHeal.h"
 
-MageHeal::MageHeal(string name) : Mage(name) {
+MageHeal::MageHeal(string name) : Mage(name), Character(name) {
 	m_strength = 1;
 	m_magic = 10;
 	m_spirit = 30;
+	m_type = "mage heal";
 }
 
 int MageHeal::heal(Character* target) {
@@ -55,7 +56,7 @@ int MageHeal::takeDamage(int value)
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Seriously ? Do that again I'll kick your ass." << endl;
 	showHP();
-	isDead();
+	dead();
 	return m_hp;
 }
 
@@ -68,7 +69,11 @@ int MageHeal::takeHealing(int value)
 	return m_hp;
 }
 
-void MageHeal::isDead()
+void MageHeal::dead()
 {
 	if (m_hp <= 0) std::cout << m_name << ": So now you kill me ? Wait till I'm back I'll kick your ass." << endl;
+}
+
+MageHeal::~MageHeal()
+{
 }

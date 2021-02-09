@@ -42,11 +42,12 @@ int Mage::zettaflare()
 
 int Mage::takeDamage(int value)
 {
+	if (m_hp <= 0) return m_hp;
 	m_hp -= value/(m_defense*2.5);
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Hey, stop hitting me !" << endl;
 	showHP();
-	dead();
+	checkDead();
 	return m_hp;
 }
 
@@ -59,7 +60,7 @@ int Mage::takeHealing(int value)
 	return m_hp;
 }
 
-void Mage::dead()
+void Mage::checkDead()
 {
 	if (m_hp <= 0) std::cout << m_name << ": So that's how I die... Meh." << endl;
 }

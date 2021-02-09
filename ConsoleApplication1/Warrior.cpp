@@ -60,11 +60,12 @@ int Warrior::seppuku()
 
 int Warrior::takeDamage(int value)
 {
+	if (m_hp <= 0) return m_hp;
 	m_hp -= value/(m_defense*2.5);
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Wow that hurts..." << endl;
 	showHP();
-	dead();
+	checkDead();
 	return m_hp;
 }
 
@@ -77,7 +78,7 @@ int Warrior::takeHealing(int value)
 	return m_hp;
 }
 
-void Warrior::dead()
+void Warrior::checkDead()
 {
 	if (m_hp <= 0) std::cout << m_name << ": I'm dying the warrior way, with honor !" << endl;
 }

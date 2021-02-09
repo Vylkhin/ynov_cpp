@@ -32,7 +32,7 @@ public:
 	int areaAttack();
 	Weapon* changeWeapon(Weapon* newWeapon);
 	void showHP();
-	virtual void dead();
+	virtual void checkDead();
 	virtual int takeDamage(int value);
 	Character* addAlly(Character* ally);
 	virtual int takeHealing(int value);

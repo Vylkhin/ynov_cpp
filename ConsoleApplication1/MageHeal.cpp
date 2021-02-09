@@ -52,11 +52,12 @@ void MageHeal::setSpirit(int spirit) {
 
 int MageHeal::takeDamage(int value)
 {
+	if (m_hp <= 0) return m_hp;
 	m_hp -= value/(m_defense*2.5);
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Seriously ? Do that again I'll kick your ass." << endl;
 	showHP();
-	dead();
+	checkDead();
 	return m_hp;
 }
 
@@ -69,7 +70,7 @@ int MageHeal::takeHealing(int value)
 	return m_hp;
 }
 
-void MageHeal::dead()
+void MageHeal::checkDead()
 {
 	if (m_hp <= 0) std::cout << m_name << ": So now you kill me ? Wait till I'm back I'll kick your ass." << endl;
 }

@@ -18,6 +18,6 @@ public:
 	void setSpirit(int spirit);
 	int takeDamage(int value);
 	int takeHealing(int value);
-	void dead();
+	void checkDead();
 };
 

@@ -17,11 +17,12 @@ ArcaneWarrior::~ArcaneWarrior()
 
 int ArcaneWarrior::takeDamage(int value)
 {
+	if (Mage::m_hp <= 0) return m_hp;
 	Mage::m_hp -= value / (Mage::m_defense * 2.5);
 	if (Mage::m_hp < 0) Mage::m_hp = 0;
 	cout << Mage::m_name << ": Stop it." << endl;
 	Mage::showHP();
-	Mage::dead();
+	Mage::checkDead();
 	return Mage::m_hp;
 }
 
@@ -34,7 +35,7 @@ int ArcaneWarrior::takeHealing(int value)
 	return Mage::m_hp;
 }
 
-void ArcaneWarrior::dead()
+void ArcaneWarrior::checkDead()
 {
 	if (Mage::m_hp <= 0) std::cout << Mage::m_name << ": I am dead." << endl;
 }

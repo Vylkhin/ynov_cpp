@@ -12,7 +12,7 @@ public:
 	virtual ~ArcaneWarrior();
 	int takeDamage(int value);
 	int takeHealing(int value);
-	void dead();
+	void checkDead();
 
 };
 

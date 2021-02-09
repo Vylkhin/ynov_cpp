@@ -41,7 +41,6 @@ template<typename T>
 inline void Overlord<T>::setSubjects()
 {
 	for (int k = 0; k < Character::m_characters.size(); k++) {
-		cout << "hehe" << endl;
 		bool isAlly = false;
 		for (unsigned int m = 0; m < Character::m_allies.size(); m++) {
 			if (Character::m_characters[k] == Character::m_allies[m]) isAlly = true;

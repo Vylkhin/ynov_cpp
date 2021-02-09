@@ -38,16 +38,17 @@ void Character::showHP() {
 	std::cout << m_name << " now has " << m_hp << " HP." << endl;
 }
 
-void Character::dead() {
+void Character::checkDead() {
 	if (m_hp <= 0) std::cout << m_name << ": I am dead." << endl;
 }
 
 int Character::takeDamage(int value) {
+	if (m_hp <= 0) return m_hp;
 	m_hp -= value/(m_defense/2.5);
 	if (m_hp < 0) m_hp = 0;
 	cout << m_name << ": Ouch." << endl;
 	showHP();
-	dead();
+	checkDead();
 	return m_hp;
 }
 

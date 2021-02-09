@@ -1,11 +1,26 @@
-﻿  ConsoleApplication1.cpp
+﻿  ArcaneWarrior.cpp
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\ArcaneWarrior.cpp(21,47): warning C4244: '-=' : conversion de 'double' en 'int', perte possible de données
+  Character.cpp
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Character.cpp(47,31): warning C4244: '-=' : conversion de 'double' en 'int', perte possible de données
+  ConsoleApplication1.cpp
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Overlord.h(35,20): warning C4018: '<' : incompatibilité signed/unsigned
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Overlord.h(33): message : pendant la compilation de la fonction membre classe modèle 'void Overlord<ArcaneWarrior>::lynching(Character *)'
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(43): message : voir la référence à l'instanciation de la fonction modèle 'void Overlord<ArcaneWarrior>::lynching(Character *)' en cours de compilation
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(13): message : voir la référence à l'instanciation classe modèle 'Overlord<ArcaneWarrior>' en cours de compilation
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Overlord.h(43,20): warning C4018: '<' : incompatibilité signed/unsigned
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Overlord.h(42): message : pendant la compilation de la fonction membre classe modèle 'void Overlord<ArcaneWarrior>::setSubjects(void)'
-D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Overlord.h(59): message : voir la référence à l'instanciation de la fonction modèle 'void Overlord<ArcaneWarrior>::setSubjects(void)' en cours de compilation
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Overlord.h(58): message : voir la référence à l'instanciation de la fonction modèle 'void Overlord<ArcaneWarrior>::setSubjects(void)' en cours de compilation
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Overlord.h(21): message : pendant la compilation de la fonction membre classe modèle 'Overlord<ArcaneWarrior>::Overlord(std::string)'
 D:\cours\c++\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(13): message : voir la référence à l'instanciation de la fonction modèle 'Overlord<ArcaneWarrior>::Overlord(std::string)' en cours de compilation
+  Mage.cpp
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Mage.cpp(46,31): warning C4244: '-=' : conversion de 'double' en 'int', perte possible de données
+  MageHeal.cpp
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\MageHeal.cpp(56,31): warning C4244: '-=' : conversion de 'double' en 'int', perte possible de données
+  Overlord.cpp
+  Warrior.cpp
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Warrior.cpp(64,31): warning C4244: '-=' : conversion de 'double' en 'int', perte possible de données
+  Weapon.cpp
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Weapon.cpp(15,58): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
+D:\cours\c++\ConsoleApplication1\ConsoleApplication1\Weapon.cpp(33,86): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
+  Génération de code en cours...
   ConsoleApplication1.vcxproj -> D:\cours\c++\ConsoleApplication1\Debug\ConsoleApplication1.exe
